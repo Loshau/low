@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Flow - Your Trusted Rental Partner in Kenya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-home me-2"></i>Rent Flow
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vendors">Vendors &amp; Associates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-warning btn-sm" onclick="scrollToSection('contact')">Get a Quote</button>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-outline-light btn-sm" onclick="showSignIn()">Sign In</button>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-warning btn-sm" onclick="showSignUp()">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        Rent Flow Property Services
+                    </h1>
+                    <p class="lead text-white-50 mb-4">
+                        Premier property and facilities management for Nairobi and beyond—repairs, preventive maintenance,
+                        tenant care and transparent rent management powered by modern software.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-warning btn-lg px-4" onclick="scrollToSection('contact')">
+                            <i class="fas fa-paper-plane me-2"></i>Get a Quote
+                        </button>
+                        <button class="btn btn-outline-light btn-lg px-4" onclick="scrollToSection('services')">
+                            <i class="fas fa-cog me-2"></i>Our Services
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Modern residential building" 
+                             class="building-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold text-primary">Gallery</h2>
+                <p class="lead text-muted">Ready to Let, Repairs &amp; Maintenance, Construction &amp; Refurbishments</p>
+            </div>
+            <ul class="nav nav-pills justify-content-center mb-4" id="galleryTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="ready-tab" data-bs-toggle="pill" data-bs-target="#ready" type="button" role="tab">Ready to Let</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="repairs-tab" data-bs-toggle="pill" data-bs-target="#repairs" type="button" role="tab">Repairs &amp; Maintenance</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="construction-tab" data-bs-toggle="pill" data-bs-target="#construction" type="button" role="tab">Construction &amp; Refurbishments</button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="ready" role="tabpanel">
+                    <p class="text-muted mb-3">Move‑in ready apartments and houses currently available for letting.</p>
+                    <div class="row g-3" id="readyGrid">
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid rounded" src="images/flat 1.jpeg" alt="Ready to Let 1"></div>
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid rounded" src="images/flat 2.jpeg" alt="Ready to Let 2"></div>
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid rounded" src="images/flat 3.jpeg" alt="Ready to Let 3"></div>
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid rounded" src="images/flat 4.jpeg" alt="Ready to Let 4"></div>
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid rounded" src="images/flat 5.jpeg" alt="Ready to Let 5"></div>
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid rounded" src="images/flat 6.jpeg" alt="Ready to Let 6"></div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary d-none" id="loadMoreReady">Load more</button>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="repairs" role="tabpanel">
+                    <p class="text-muted mb-3">Snapshots of fault fixes, corrective works and routine upkeep in progress.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid" src="images/rangi 1.jpeg" alt="Painting work 1"></div>
+                        <div class="col-sm-6 col-lg-4 gallery-item"><img class="img-fluid" src="images/rangi 2.jpeg" alt="Painting work 2"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="construction" role="tabpanel">
+                    <p class="text-muted mb-3">Highlights from new builds, refurbishments and project milestones.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-lg-4"><img class="img-fluid rounded" src="images/construction 1.jpeg" alt="Construction 1"></div>
+                        <div class="col-sm-6 col-lg-4"><img class="img-fluid rounded" src="images/construction 2.jpeg" alt="Construction 2"></div>
+                        <div class="col-sm-6 col-lg-4"><img class="img-fluid rounded" src="images/construction 3.jpeg" alt="Construction 3"></div>
+                        <div class="col-sm-6 col-lg-4"><img class="img-fluid rounded" src="images/construction 4.jpeg" alt="Construction 4"></div>
+                        <div class="col-sm-6 col-lg-4"><img class="img-fluid rounded" src="images/construction 5.jpeg" alt="Construction 5"></div>
+                        <div class="col-sm-6 col-lg-4"><img class="img-fluid rounded" src="images/construction 6.jpeg" alt="Construction 6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Markets -->
+    <section id="markets" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold text-primary">Markets</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-4 rounded shadow-sm h-100 text-center">
+                        <h5 class="text-primary">Residential A</h5>
+                        <p class="mb-0">Single‑family: apartments, maisonettes and bungalows.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-4 rounded shadow-sm h-100 text-center">
+                        <h5 class="text-primary">Residential B</h5>
+                        <p class="mb-0">Multi‑family: low, medium and high‑rise developments.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-4 rounded shadow-sm h-100 text-center">
+                        <h5 class="text-primary">Commercial</h5>
+                        <p class="mb-0">Warehouses, shops, hotels, restaurants and offices.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-4 rounded shadow-sm h-100 text-center">
+                        <h5 class="text-primary">Institutions</h5>
+                        <p class="mb-0">Schools and religious centres.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us -->
+    <section id="why" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold text-primary">Why Choose Us</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h5 class="text-primary">Our Mission</h5>
+                        <p class="mb-0">To enhance property value, optimize cost efficiency, and elevate tenant satisfaction by providing seamless, technology‑driven property and facilities management solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h5 class="text-primary">Our Vision</h5>
+                        <p class="mb-0">To be the leading property and facilities management company in Kenya and beyond, recognized for excellence, innovation, and reliability in delivering tailored property solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h5 class="text-primary">Our Core Values</h5>
+                        <ul class="mb-0">
+                            <li>Service</li>
+                            <li>Teamwork</li>
+                            <li>Integrity</li>
+                            <li>Respect</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Vendors & Associates Section -->
+    <section id="vendors" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold text-primary">Vendors &amp; Associates</h2>
+                <p class="lead text-muted">Our vetted network of professionals and skilled trades support every stage of your project—from design and costing to construction and ongoing care.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h4 class="text-primary mb-3">Professional Services</h4>
+                        <div class="accordion" id="accordionProfessional">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingArchitects">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArchitects" aria-expanded="false" aria-controls="collapseArchitects">
+                                        Architects
+                                    </button>
+                                </h2>
+                                <div id="collapseArchitects" class="accordion-collapse collapse" aria-labelledby="headingArchitects" data-bs-parent="#accordionProfessional">
+                                    <div class="accordion-body">
+                                        Architects lead the creative and technical process of turning ideas into buildable spaces. They consult on client needs, analyze sites and codes, develop concept sketches and detailed drawings, coordinate approvals, and collaborate with engineers and contractors. Their work balances aesthetics, functionality, safety, sustainability, and budget to deliver compliant, efficient, and inspiring buildings.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingEngineers">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEngineers" aria-expanded="false" aria-controls="collapseEngineers">
+                                        Engineers
+                                    </button>
+                                </h2>
+                                <div id="collapseEngineers" class="accordion-collapse collapse" aria-labelledby="headingEngineers" data-bs-parent="#accordionProfessional">
+                                    <div class="accordion-body">
+                                        Engineers provide the structural and building services backbone of projects. Structural engineers design safe frameworks and load paths; MEP engineers design mechanical, electrical and plumbing systems for comfort and efficiency. They produce calculations, specifications and drawings, verify code compliance, review shop drawings, visit sites, and solve technical issues that arise during construction and commissioning.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingInterior">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterior" aria-expanded="false" aria-controls="collapseInterior">
+                                        Interior Designers
+                                    </button>
+                                </h2>
+                                <div id="collapseInterior" class="accordion-collapse collapse" aria-labelledby="headingInterior" data-bs-parent="#accordionProfessional">
+                                    <div class="accordion-body">
+                                        Interior designers plan how spaces feel and function day‑to‑day. They develop layouts, select finishes, lighting, furniture and joinery, and coordinate details that elevate comfort, durability and brand expression. They align aesthetics with user workflows and safety requirements, control budgets through curated options, and supervise installations to achieve a cohesive, high‑quality interior outcome.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingQS">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQS" aria-expanded="false" aria-controls="collapseQS">
+                                        Quantity Surveyors
+                                    </button>
+                                </h2>
+                                <div id="collapseQS" class="accordion-collapse collapse" aria-labelledby="headingQS" data-bs-parent="#accordionProfessional">
+                                    <div class="accordion-body">
+                                        Quantity surveyors manage project costs from concept to handover. They prepare cost plans, bills of quantities and tender documents; evaluate bids; administer contracts; track variations; and certify payments. By providing transparent estimates, risk allowances and value engineering options, they protect budgets and help clients make informed decisions throughout the build lifecycle.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h4 class="text-primary mb-3">Construction &amp; Skilled Trades</h4>
+                        <div class="accordion" id="accordionTrades">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingContractors">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContractors" aria-expanded="false" aria-controls="collapseContractors">
+                                        Contractors
+                                    </button>
+                                </h2>
+                                <div id="collapseContractors" class="accordion-collapse collapse" aria-labelledby="headingContractors" data-bs-parent="#accordionTrades">
+                                    <div class="accordion-body">
+                                        Contractors organize labor, materials, equipment and sequencing to build safely and on schedule. They coordinate subcontractors, manage procurement and logistics, implement quality and safety plans, and communicate with consultants and clients. Their site leadership converts drawings into reality while controlling risks, costs and time across every construction phase.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingElectricians">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseElectricians" aria-expanded="false" aria-controls="collapseElectricians">
+                                        Electricians
+                                    </button>
+                                </h2>
+                                <div id="collapseElectricians" class="accordion-collapse collapse" aria-labelledby="headingElectricians" data-bs-parent="#accordionTrades">
+                                    <div class="accordion-body">
+                                        Electricians install and maintain power distribution, lighting, controls and protective devices. They pull cables, terminate panels, fit fixtures, test for continuity and insulation, and commission systems to standards. Their work ensures safety, reliability and energy efficiency for occupants and critical building systems.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingPlumbers">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlumbers" aria-expanded="false" aria-controls="collapsePlumbers">
+                                        Plumbers
+                                    </button>
+                                </h2>
+                                <div id="collapsePlumbers" class="accordion-collapse collapse" aria-labelledby="headingPlumbers" data-bs-parent="#accordionTrades">
+                                    <div class="accordion-body">
+                                        Plumbers install and service water supply, drainage and sanitary systems. They route piping, fit valves and fixtures, test pressures and flows, and resolve leaks or blockages. Proper plumbing protects health, conserves water and supports dependable kitchens, bathrooms and building services throughout the property.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCarpenters">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCarpenters" aria-expanded="false" aria-controls="collapseCarpenters">
+                                        Carpenters
+                                    </button>
+                                </h2>
+                                <div id="collapseCarpenters" class="accordion-collapse collapse" aria-labelledby="headingCarpenters" data-bs-parent="#accordionTrades">
+                                    <div class="accordion-body">
+                                        Carpenters construct and finish wood elements such as framing, doors, ceilings, cabinets and custom joinery. They read drawings, cut and assemble components, and install hardware and trims. Their craftsmanship improves structural integrity, usability and the overall look and feel of interiors and exteriors.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingPainters">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePainters" aria-expanded="false" aria-controls="collapsePainters">
+                                        Painters
+                                    </button>
+                                </h2>
+                                <div id="collapsePainters" class="accordion-collapse collapse" aria-labelledby="headingPainters" data-bs-parent="#accordionTrades">
+                                    <div class="accordion-body">
+                                        Painters prepare surfaces, repair defects, apply primers and durable finishes, and deliver consistent color and texture. Through proper surface conditioning and product selection, they protect substrates from weathering and wear, improve hygiene and light reflectance, and elevate the visual character of spaces inside and out.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h4 class="text-primary mb-3">Property Care &amp; Maintenance</h4>
+                        <div class="accordion" id="accordionCare">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingLandscapers">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLandscapers" aria-expanded="false" aria-controls="collapseLandscapers">
+                                        Landscapers
+                                    </button>
+                                </h2>
+                                <div id="collapseLandscapers" class="accordion-collapse collapse" aria-labelledby="headingLandscapers" data-bs-parent="#accordionCare">
+                                    <div class="accordion-body">
+                                        Landscapers design and maintain outdoor environments that are functional, safe and beautiful. They plan softscape and hardscape features, install lawns, plants and irrigation, and provide ongoing pruning, weeding and soil care. Quality landscaping improves curb appeal, supports biodiversity, manages stormwater and creates welcoming communal and private outdoor spaces.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFumigation">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFumigation" aria-expanded="false" aria-controls="collapseFumigation">
+                                        Fumigation Specialists
+                                    </button>
+                                </h2>
+                                <div id="collapseFumigation" class="accordion-collapse collapse" aria-labelledby="headingFumigation" data-bs-parent="#accordionCare">
+                                    <div class="accordion-body">
+                                        Fumigation specialists assess infestation risks and apply targeted treatments to eliminate pests while protecting occupant health and assets. They select safe chemicals or non‑chemical methods, schedule works to minimize disruption, and advise on preventive measures. Proper pest management safeguards hygiene, structures, equipment and tenant comfort.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingExterminators">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExterminators" aria-expanded="false" aria-controls="collapseExterminators">
+                                        Exterminators
+                                    </button>
+                                </h2>
+                                <div id="collapseExterminators" class="accordion-collapse collapse" aria-labelledby="headingExterminators" data-bs-parent="#accordionCare">
+                                    <div class="accordion-body">
+                                        Exterminators identify pest species, locate nests and access points, and implement eradication and exclusion strategies. They monitor results, rotate treatments to avoid resistance, and educate occupants on sanitation and storage practices. Effective extermination restores healthy conditions and prevents costly damage to finishes, wiring and stored goods.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="h1 fw-bold text-primary mb-4">About Rent Flow</h2>
+                    <p class="lead">
+                        Based in Kenya, Rent Flow is your trusted partner for all rental needs. 
+                        We understand the local market and provide personalized service to help you find the perfect space.
+                    </p>
+                    <div class="mt-4">
+                        <h4 class="text-primary">Vision &amp; Mission</h4>
+                        <p class="mb-2"><strong>Vision:</strong> To be the most trusted, efficient and people-first rental partner.</p>
+                        <p class="mb-3"><strong>Mission:</strong> Deliver seamless housing and property solutions through service, integrity and excellence.</p>
+
+                        <h4 class="text-primary">Core Values</h4>
+                        <ul class="mb-3">
+                            <li>Service</li>
+                            <li>Integrity</li>
+                            <li>Teamwork</li>
+                            <li>Respect</li>
+                        </ul>
+
+                        <h4 class="text-primary">What We Offer</h4>
+                        <ul>
+                            <li>Efficient rent management</li>
+                            <li>Planned and preventive maintenance</li>
+                            <li>Landscaping</li>
+                            <li>Reactive maintenance</li>
+                            <li>Cleaning and general maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Verified Properties</h5>
+                                    <p class="text-muted mb-0">All listings are verified and up-to-date</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-shield-alt text-success fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Secure Transactions</h5>
+                                    <p class="text-muted mb-0">Safe and secure rental process</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-headset text-success fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">24/7 Support</h5>
+                                    <p class="text-muted mb-0">Round-the-clock customer service</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt text-success fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Local Expertise</h5>
+                                    <p class="text-muted mb-0">Deep knowledge of Kenyan market</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-stats bg-white p-4 rounded shadow">
+                        <h3 class="text-center mb-4">Our Impact</h3>
+                        <div class="row text-center">
+                            <div class="col-6 mb-3">
+                                <h2 class="text-primary fw-bold">15+</h2>
+                                <p class="text-muted">Properties Listed</p>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <h2 class="text-primary fw-bold">1000+</h2>
+                                <p class="text-muted">Happy Clients</p>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <h2 class="text-primary fw-bold">10+</h2>
+                                <p class="text-muted">Counties Covered</p>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <h2 class="text-primary fw-bold">3+</h2>
+                                <p class="text-muted">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold text-primary">Our Services</h2>
+                <p class="lead text-muted">Comprehensive property and facilities management</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mt-3">Reactive Maintenance</h4>
+                        <p class="text-muted">Rapid response services to address urgent repairs and unexpected technical failures.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-calendar-check fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mt-3">Planned &amp; Preventive Maintenance</h4>
+                        <p class="text-muted">Regular inspections and scheduled tasks that reduce downtime and extend asset life.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-leaf fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mt-3">Landscaping</h4>
+                        <p class="text-muted">Designing and maintaining outdoor spaces to improve appeal and usability.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-broom fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mt-3">Cleaning &amp; General Maintenance</h4>
+                        <p class="text-muted">Daily and periodic cleaning, minor fixes and caretaking for pristine facilities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-holding-usd fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mt-3">Efficient Rent Management</h4>
+                        <p class="text-muted">Real‑time rent tracking, arrears management and transparent reporting.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mt-3">Projects: Construction &amp; Refurbishment</h4>
+                        <p class="text-muted">High‑quality builds and upgrades, from concepts to handover.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="h1 fw-bold mb-4">Get In Touch</h2>
+                    <p class="lead mb-4">
+                        Ready to find your next rental? Contact our team today for personalized assistance.
+                    </p>
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Address</h5>
+                                <p class="mb-0">Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone fa-2x me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Phone</h5>
+                                <p class="mb-0">+254 700925926</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope fa-2x me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Email</h5>
+                                <p class="mb-0">loshauathuman005@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control form-control-lg" placeholder="Your Phone">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select form-select-lg">
+                                <option>I'm looking for...</option>
+                                <option>Residential Rental</option>
+                                <option>Commercial Rental</option>
+                                <option>Property Management</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control form-control-lg" rows="4" placeholder="Tell us about your needs..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-lg w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white text-decoration-none" href="#home">Home</a></li>
+                        <li><a class="text-white text-decoration-none" href="#about">About Us</a></li>
+                        <li><a class="text-white text-decoration-none" href="#services">Our Services</a></li>
+                        <li><a class="text-white text-decoration-none" href="#vendors">Vendors &amp; Associates</a></li>
+                        <li><a class="text-white text-decoration-none" href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <p class="mb-1">Address: Nairobi, Kenya</p>
+                    <p class="mb-1">Phone: +254 700 925 926</p>
+                    <p class="mb-3">E‑mail: loshauathuman005@gmail.com</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Get In touch With Us</h5>
+                    <button class="btn btn-warning" onclick="scrollToSection('contact')">Get a Quote</button>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <small>RENT FLOW © 2025 RIGHTS RESERVED.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">
+                        <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signInForm">
+                        <div class="mb-3">
+                            <label for="signInEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="signInEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signInPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signInPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">
+                                Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                        </button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalLabel">
+                        <i class="fas fa-user-plus me-2"></i>Sign Up
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signUpForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="signUpEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">
+                            <i class="fas fa-user-plus me-2"></i>Create Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
